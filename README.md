@@ -3,6 +3,8 @@
 ## Overview
 Colorizer is a simple Chrome Extension built using React and Vite. It allows users to dynamically change the background and text color of a web page using color pickers. The extension utilizes Chrome's scripting API to apply the selected colors to the active tab.
 
+![image](https://github.com/user-attachments/assets/e6be60f8-c722-4823-85bd-6cb51baaaf58)
+
 ## Features
 - **Change Background Color:** Select a color and apply it to the background of the current web page.
 - **Change Text Color:** Select a color and apply it to the text of the current web page.
