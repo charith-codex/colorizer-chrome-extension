@@ -1,50 +1,40 @@
-# React + TypeScript + Vite
+# Colorizer Chrome Extension
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+Colorizer is a simple Chrome Extension built using React and Vite. It allows users to dynamically change the background and text color of a web page using color pickers. The extension utilizes Chrome's scripting API to apply the selected colors to the active tab.
 
-Currently, two official plugins are available:
+## Features
+- **Change Background Color:** Select a color and apply it to the background of the current web page.
+- **Change Text Color:** Select a color and apply it to the text of the current web page.
+- Built with React and TypeScript for a modern and efficient development experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation and Usage
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1. Clone the Repository
+```bash
+git clone https://github.com/charith-codex/colorizer-chrome-extension.git
+cd colorizer-chrome-extension
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2. Install Dependencies
 ```
+npm install
+```
+
+### 3. Build the Project
+Build the project for production:
+```
+npm run build
+```
+This will generate the dist folder.
+
+### 4. Load the Extension in Chrome
+Open Chrome and navigate to chrome://extensions/.
+Enable Developer Mode (toggle switch at the top-right).
+Click Load Unpacked and select the dist folder from the project directory.
+The Colorizer extension will now be added to your Chrome browser.
+
+### 5. Use the Extension
+Click the extension icon in the Chrome toolbar.
+Use the color pickers to select your desired background and text colors.
+Click the buttons to apply the changes to the active tab.
