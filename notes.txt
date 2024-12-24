@@ -1,0 +1,2 @@
+npm run build 
+then dist folder load in chrome extention
